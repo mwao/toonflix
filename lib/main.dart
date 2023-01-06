@@ -83,7 +83,7 @@ class App extends StatelessWidget {
                     height: 10,
                   ),
                   Text(
-                    '\$5 194 482',
+                    '\$5,194,482',
                     style: TextStyle(
                       color: Colors.white.withOpacity(0.9),
                       fontSize: 42,
@@ -115,7 +115,73 @@ class App extends StatelessWidget {
                         ),
                       ),
                     ],
-                  )
+                  ),
+                  const SizedBox(
+                    height: 100,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment
+                        .spaceBetween, //row의 메인은 가로축 , cross는 세로축
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      const Text(
+                        'Wallets',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 36),
+                      ),
+                      Text(
+                        'view all',
+                        style: TextStyle(
+                          color: Colors.white.withOpacity(0.8),
+                          fontSize: 18,
+                        ),
+                      )
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF1F2123),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 20, horizontal: 30),
+                        child: Row(
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text(
+                                  'Euro',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 32,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  children: const [
+                                    Text('6,428',
+                                        style: TextStyle(color: Colors.white)),
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    Text('EUR',
+                                        style: TextStyle(color: Colors.white))
+                                  ],
+                                )
+                              ],
+                            )
+                          ],
+                        ),
+                      ))
                 ],
               ))),
     );
